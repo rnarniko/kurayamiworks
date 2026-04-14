@@ -17,34 +17,23 @@
             background-attachment: fixed;
         }
 
-        /* ヘッダーエリア */
+        /* ヘッダーエリア：中央寄せに変更 */
         header {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px;
+            flex-direction: column; /* 縦並びに変更 */
+            align-items: center;    /* 中央寄せ */
+            padding: 30px 20px;
             background: rgba(255, 255, 255, 0.9);
-            border-bottom: 3px solid #f8bbd0; /* ピンクの境界線 */
-            gap: 20px;
+            border-bottom: 3px solid #f8bbd0;
+            gap: 15px;
         }
 
-        .header-left {
-            flex: 1;
-            font-size: 14px;
-            line-height: 1.6;
-            color: #880e4f;
-        }
-
-        .header-left strong {
-            color: #d81b60;
-        }
-
-        .header-right {
+        .header-banner {
             flex-shrink: 0;
         }
 
-        .header-right a img {
-            width: 300px;
+        .header-banner a img {
+            width: 320px; /* 少し大きく調整 */
             height: auto;
             border-radius: 8px;
             border: 2px solid #f8bbd0;
@@ -52,12 +41,23 @@
             transition: transform 0.3s ease;
         }
 
-        .header-right a img:hover {
+        .header-banner a img:hover {
             transform: scale(1.02);
             opacity: 0.9;
         }
 
-        /* ナビゲーション：アイドル風カラー */
+        .header-info {
+            text-align: center;
+            font-size: 14px;
+            line-height: 1.6;
+            color: #880e4f;
+        }
+
+        .header-info strong {
+            color: #d81b60;
+        }
+
+        /* ナビゲーション */
         nav {
             display: flex;
             justify-content: center;
@@ -87,7 +87,7 @@
         nav button.active {
             color: #fff;
             background: #d81b60;
-            box-shadow: inset 0 -4px 0 #fff; /* 下線風のデザイン */
+            box-shadow: inset 0 -4px 0 #fff;
         }
 
         /* コンテンツエリア */
@@ -111,7 +111,7 @@
             to { opacity: 1; }
         }
 
-        /* 各作品のスタイル：清潔感のある白背景 */
+        /* 作品スタイル */
         .work-item {
             background: #fff;
             margin-bottom: 40px;
@@ -146,16 +146,10 @@
             border: none;
         }
 
-        /* レスポンシブ対応 */
         @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                text-align: center;
-            }
-            .header-right a img {
+            .header-banner a img {
                 width: 100%;
-                max-width: 400px;
-                margin: 0 auto;
+                max-width: 300px;
             }
             nav button {
                 padding: 12px 10px;
@@ -168,14 +162,14 @@
 <body>
 
 <header>
-    <div class="header-left">
-        成人向け同人音声サークル暗闇WorksのWebサイトです。<br>
-        <strong>18歳未満の方のご利用はお控えください。</strong>
-    </div>
-    <div class="header-right">
+    <div class="header-banner">
         <a href="https://ci-en.dlsite.com/creator/16675?_gl=1*14ubz1c*_gcl_au*MjAyMTMyOTgxNi4xNzY2NDgzMTA2LjE4NzU3NTA2MzcuMTc3MzU1NjM5Mi4xNzczNTU3MTcy" target="_blank">
             <img src="Cien_Banner.jpg" alt="Ci-enで暗闇Worksを応援する">
         </a>
+    </div>
+    <div class="header-info">
+        成人向け同人音声サークル暗闇WorksのWebサイトです。<br>
+        <strong>18歳未満の方のご利用はお控えください。</strong>
     </div>
 </header>
 

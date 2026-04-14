@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>暗闇Works 公式サイト</title>
+    <style>
+        /* アイドル・VTuber風パステルデザイン */
+        body {
+            font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+            line-height: 1.6;
+            color: #555;
+            margin: 0;
+            padding: 0;
+            /* 薄いパステルピンクのグラデーション背景 */
+            background: linear-gradient(135deg, #fff5f7 0%, #fce4ec 100%);
+            background-attachment: fixed;
+        }
+
+        /* ヘッダーエリア */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-bottom: 3px solid #f8bbd0; /* ピンクの境界線 */
+            gap: 20px;
+        }
+
+        .header-left {
+            flex: 1;
+            font-size: 14px;
+            line-height: 1.6;
+            color: #880e4f;
+        }
+
+        .header-left strong {
+            color: #d81b60;
+        }
+
+        .header-right {
+            flex-shrink: 0;
+        }
+
+        .header-right a img {
+            width: 300px;
+            height: auto;
+            border-radius: 8px;
+            border: 2px solid #f8bbd0;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .header-right a img:hover {
+            transform: scale(1.02);
+            opacity: 0.9;
+        }
+
+        /* ナビゲーション：アイドル風カラー */
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #ad1457;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        nav button {
+            background: none;
+            border: none;
+            color: #f8bbd0;
+            padding: 15px 25px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        nav button:hover {
+            color: #fff;
+            background: #d81b60;
+        }
+
+        nav button.active {
+            color: #fff;
+            background: #d81b60;
+            box-shadow: inset 0 -4px 0 #fff; /* 下線風のデザイン */
+        }
+
+        /* コンテンツエリア */
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 0 15px;
+        }
+
+        .content-group {
+            display: none;
+        }
+
+        .content-group.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* 各作品のスタイル：清潔感のある白背景 */
+        .work-item {
+            background: #fff;
+            margin-bottom: 40px;
+            padding: 25px;
+            border-radius: 15px;
+            border: 2px solid #fce4ec;
+            box-shadow: 0 4px 10px rgba(216, 27, 96, 0.1);
+        }
+
+        .work-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #ad1457;
+            border-left: 6px solid #f06292;
+            padding-left: 15px;
+            margin-bottom: 20px;
+            line-height: 1.4;
+        }
+
+        .chobit-area {
+            position: relative;
+            width: 100%;
+            text-align: center;
+            background: #fffafa;
+            border-radius: 10px;
+            padding: 10px 0;
+        }
+
+        .chobit-area iframe {
+            width: 100%;
+            max-width: 740px;
+            border: none;
+        }
+
+        /* レスポンシブ対応 */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+            .header-right a img {
+                width: 100%;
+                max-width: 400px;
+                margin: 0 auto;
+            }
+            nav button {
+                padding: 12px 10px;
+                font-size: 14px;
+                flex: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-left">
+        成人向け同人音声サークル暗闇WorksのWebサイトです。<br>
+        <strong>18歳未満の方のご利用はお控えください。</strong>
+    </div>
+    <div class="header-right">
+        <a href="https://ci-en.dlsite.com/creator/16675?_gl=1*14ubz1c*_gcl_au*MjAyMTMyOTgxNi4xNzY2NDgzMTA2LjE4NzU3NTA2MzcuMTc3MzU1NjM5Mi4xNzczNTU3MTcy" target="_blank">
+            <img src="IMG_9338.jpg" alt="Ci-enで応援する">
+        </a>
+    </div>
+</header>
+
+<nav>
+    <button onclick="showGroup('male')" id="btn-male" class="active">男性向け作品</button>
+    <button onclick="showGroup('female')" id="btn-female">女性向け作品</button>
+</nav>
+
+<div class="container">
+    <div id="group-male" class="content-group active">
+        
+        <div class="work-item">
+            <div class="work-title">催眠音声-私と子作りしてください♡一夜限りの濃蜜孕ませ植物SEX"種孕"【連続∞メスイキ】</div>
+            <div class="chobit-area">
+                <iframe height="215" frameborder="0" allowfullscreen="" src="https://chobit.cc/embed/hdskw/2y2vs4vy?aid=kurayamiworks"></iframe>
+            </div>
+        </div>
+
+        <div class="work-item">
+            <div class="work-title">催眠音声-口腔催眠カウントトリップ</div>
+            <div class="chobit-area">
+                <iframe height="215" frameborder="0" allowfullscreen="" src="https://chobit.cc/embed/ed8tu/cbwix8o0?aid=kurayamiworks"></iframe>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="group-female" class="content-group">
+        
+        <div class="work-item">
+            <div class="work-title">"LIP TRANCE"貴方を狂わせるカウント・キス</div>
+            <div class="chobit-area">
+                <iframe height="215" frameborder="0" allowfullscreen="" src="https://chobit.cc/embed/2aant/ekjy5hi1?aid=kurayamiworks"></iframe>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    function showGroup(type) {
+        document.getElementById('group-male').classList.remove('active');
+        document.getElementById('group-female').classList.remove('active');
+        document.getElementById('btn-male').classList.remove('active');
+        document.getElementById('btn-female').classList.remove('active');
+
+        if (type === 'male') {
+            document.getElementById('group-male').classList.add('active');
+            document.getElementById('btn-male').classList.add('active');
+        } else {
+            document.getElementById('group-female').classList.add('active');
+            document.getElementById('btn-female').classList.add('active');
+        }
+    }
+</script>
+
+</body>
+</html>
